@@ -20,7 +20,7 @@ Verify response OK status
 add a new pet to the store
     ${data_as_string} =    Get File   ${POST_JSON}
     ${data_as_json} =    json.loads    ${data_as_string}
-    ${response}=    POST On Session   petstore   ${BASE_URL}/pet  json=${data_as_json}  expected_status=any
+    ${response}=    POST On Session   petstore   ${BASE_URL}/pet  json=${data_as_json}  expected_status=200
     Set Test Variable   ${response}
     Set Test Variable   ${data_as_json}
 
@@ -32,7 +32,7 @@ Verify pet id in response
 Update pet status to sold from available
     ${data_as_string} =    Get File    ${UPDATE_JSON}
     ${data_as_json} =    json.loads    ${data_as_string}
-    ${response}=    PUT On Session   petstore   ${BASE_URL}/pet  json=${data_as_json}  expected_status=any
+    ${response}=    PUT On Session   petstore   ${BASE_URL}/pet  json=${data_as_json}  expected_status=200
     Set Test Variable   ${response}
     Set Test Variable   ${data_as_json}
 
@@ -43,5 +43,5 @@ Verify pet status in response
 
 delete a pet by id
     ${pet_id}=   set variable   123
-    ${response}=    DELETE On Session   petstore    ${BASE_URL}/pet/${pet_id}   params=api_key=special-key  expected_status=any
+    ${response}=    DELETE On Session   petstore    ${BASE_URL}/pet/${pet_id}   params=api_key=special-key  expected_status=200
     Set Test Variable   ${response}

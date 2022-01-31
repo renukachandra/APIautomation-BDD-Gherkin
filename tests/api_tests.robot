@@ -1,5 +1,5 @@
 *** Settings ***
-Resource         ../steps/main.robot
+Resource         ../resources.robot
 Resource         ../steps/store.robot
 Suite Setup      Suite Setup
 
