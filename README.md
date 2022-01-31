@@ -5,7 +5,7 @@ Swagger.io petstore: https://petstore.swagger.io/
 
 # Details
 This framework is using page object model as a pattern structure and BDD (Behavior Driven Development) framework as a testing approach with single gherkin language. It's using 4 folders and 1 file in the root directory.
-Furthermore, Data driven approach can also be integrated in this framework
+
 * **requests folder**
     * This folder contains all json requests in separate files
 * **steps folder**
